@@ -20,8 +20,7 @@ The **QCH** files are in the **Qt Help** format ready to use with the [**Qt Assi
 
 The **main.py** script can be used to build **Qt help project** file to then generate **QCH** help file.
 
-**OS:** Windows x64
-
+**OS:** Windows x64 <br>
 **Tools**: [wget](http://gnuwin32.sourceforge.net/packages/wget.htm), [Python 3.5](https://www.python.org/downloads/release/python-350/), [Qt 5.3.1](https://download.qt.io/archive/qt/5.3/5.3.1/)
 
 Steps performed to build the available packages:
