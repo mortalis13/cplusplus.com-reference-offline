@@ -14,7 +14,7 @@ It includes:
 
 The **_site** package includes linked **HTML** pages corresponding to the full site except **Forum** or only **Reference** block of the site. It can be viewed in any browser.
 
-The **QCH** files are in the **Qt Help** format ready to use with the [**Qt Assistant**](http://doc.qt.io/qt-5/assistant-quick-guide.html) tool.
+The **QCH** files are in the **Qt Help** format ready to use with the [**Qt Assistant**](http://doc.qt.io/qt-5/assistant-quick-guide.html) tool from the [**Qt Installation**](https://download.qt.io/archive/qt/5.3/5.3.1/).
 
 ## Build info
 
@@ -41,7 +41,7 @@ Steps performed to build the available packages:
 
       python main.py
 
-- Wait some time (it was about 1 min in my case) and check the **qch-proj.xml** file in the site root. It has the **Qt Help project** data needed to generate the **.qch** file. It should contain **<keywords>** section which will go the the **Index** panel of the **Qt Assistant** tool with relative links to the pages for each keyword. And **<files>** section with all the files (HTML pages and resources) that will be packed to the help file.
+- Wait some time (it was about 1 min in my case) and check the **qch-proj.xml** file in the site root. It has the **Qt Help project** data needed to generate the **.qch** file. It should contain **<keywords>** section which will go to the **Index** panel of the **Qt Assistant** tool with relative links to the pages for each keyword. And **<files>** section with all the files (HTML pages and resources) that will be packed to the help file.
 
 - Generate the **.qch** file with Qt running the command:
 
@@ -61,4 +61,4 @@ Steps performed to build the available packages:
 
 I didn't add full **Table of contents** to the **.qch** file because the site itself has already its navigation panel.
 
-If you want to regenerate **Qt help** files you may use prebuilt project files: **qch-proj-cpp-ref.xml** and **qch-proj-cpp-full.xml** inside the **_site** packages in the releases. Run the `qhelpgenerator` command mentioned above to get the **.qch** help file.
+If you want to regenerate **Qt Help** files you may use prebuilt project files: **qch-proj-cpp-ref.xml** and **qch-proj-cpp-full.xml** inside the **_site** packages in the releases. Run the `qhelpgenerator` command mentioned above to get the **.qch** help file.
