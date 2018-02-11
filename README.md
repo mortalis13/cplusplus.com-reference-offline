@@ -43,18 +43,22 @@ Steps performed to build the available packages:
 
 - Wait some time (it was about 1 min in my case) and check the **qch-proj.xml** file in the site root. It has the **Qt Help project** data needed to generate the **.qch** file. It should contain **<keywords>** section which will go the the **Index** panel of the **Qt Assistant** tool with relative links to the pages for each keyword. And **<files>** section with all the files (HTML pages and resources) that will be packed to the help file.
 
-- Generate he **.qch** file with Qt running the command:
+- Generate the **.qch** file with Qt running the command:
 
       [QT_HOME]\bin\qhelpgenerator "qch-proj.xml" -o "cpp-ref.qch"
 
   the file should be about 15 MB
 
-- To check the final file open **Qt Assistant** from the **[QT_HOME]\bin\assistant.exe**
+## Load **QCH** in **Qt Assistant**
+
+- First open **Qt Assistant** from the **[QT_HOME]\bin\assistant.exe**
 
 - Navigate to the **Edit -> Preferences** menu, **Documentation** tab and **Add** the file to the list.
 
-- After that you should see the **Standard C++ Library reference** entry in the **Content** panel. Click there and navigate the reference. The **Index** panel can be used to search for the most important keywords and the tool also allows to **Search** the content of all the pages.
+- After that you should see the **Standard C++ Library reference** entry in the **Content** panel (or **cplusplus.com** menu in the case of full site). Click there and navigate the reference. The **Index** panel can be used to search for the most important keywords and the tool also allows to **Search** the content of all the pages.
 
 ## Notes
 
-I didn't add **Table of contents** to the **.qch** file because the site itself has already its navigation panel.
+I didn't add full **Table of contents** to the **.qch** file because the site itself has already its navigation panel.
+
+If you want to regenerate **Qt help** files you may use prebuilt project files: **qch-proj-cpp-ref.xml** and **qch-proj-cpp-full.xml** inside the **_site** packages in the releases. Run the `qhelpgenerator` command mentioned above to get the **.qch** help file.
